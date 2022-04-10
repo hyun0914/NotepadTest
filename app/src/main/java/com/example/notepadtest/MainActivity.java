@@ -72,5 +72,6 @@ public class MainActivity extends AppCompatActivity {
     public void writing(View view){
         Intent in = new Intent(getApplicationContext(),MainActivity2.class);
         startActivity(in);
+        finish();
     }
 }

@@ -60,8 +60,8 @@ public class MainActivity3 extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "수정완료", Toast.LENGTH_LONG).show();
             Intent in = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(in);
+            finish();
         }
-        finish();
     }
 
     public void deleteNotepad(View view){
@@ -71,6 +71,13 @@ public class MainActivity3 extends AppCompatActivity {
         sqlDB.execSQL(sql);
         sqlDB.close();
         Toast.makeText(getApplicationContext(), "삭제완료", Toast.LENGTH_LONG).show();
+        Intent in = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(in);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed(){
         Intent in = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(in);
         finish();

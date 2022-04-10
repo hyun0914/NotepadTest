@@ -77,13 +77,13 @@ public class NotepadAdapter extends RecyclerView.Adapter<NotepadAdapter.ViewHold
             SimpleDateFormat sFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
             Date date = new Date();
             String nTime = sFormat.format(date);
-            dateNotepad = new DateNotepad(nTime);   
+            dateNotepad = new DateNotepad(nTime);
         }
 
         public void setItems(Notepad item){
             titleView.setText(item.getTitle());
             dateView.setText(dateNotepad.getdTime());
-            Log.d("ddddd", items.size()+"");
+            Log.d("itemsSize", items.size()+"");
         }
     }
 }
